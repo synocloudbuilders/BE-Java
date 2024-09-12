@@ -8,7 +8,7 @@ RUN chmod +x ./mvnw
 RUN ./mvnw dependency:go-offline
 
 COPY . .
-RUN ./mvnw clean install
+RUN sudo ./mvnw clean install
 
 FROM bitnami/java:17-debian-12
 WORKDIR /helloworld
